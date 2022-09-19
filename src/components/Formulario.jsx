@@ -25,7 +25,7 @@ const CATEGORIAS = [
 const Formulario = () => {
   //
   const { categoria, handleChangeCategoria } = useNoticias();
-  console.log(categoria);
+  // console.log(categoria);
   //
   return (
     <form>
@@ -46,11 +46,7 @@ const Formulario = () => {
           sx={{
             marginTop: 2,
           }}
-        >
-          <Button fullWidth variant="contained" color="primary">
-            Buscar Noticias
-          </Button>
-        </Box>
+        ></Box>
       </FormControl>
     </form>
   );
