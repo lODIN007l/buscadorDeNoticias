@@ -6,6 +6,8 @@ const NoticiasContext = createContext();
 const NoticiasProvider = ({ children }) => {
   const [categoria, setCategoria] = useState("general");
   const [noticias, setNoticias] = useState([]);
+  const [pagina, setPagina] = useState(1);
+  const [totalNoticias, setTotalNoticias] = useState(0);
   //
   const handleChangeCategoria = (e) => {
     setCategoria(e.target.value);
@@ -19,6 +21,7 @@ const NoticiasProvider = ({ children }) => {
       }`;
       const { data } = await axios(url);
       setNoticias(data.articles);
+      setTotalNoticias(data.totalResults);
       //   console.log(data);
     };
     consultarApi();
