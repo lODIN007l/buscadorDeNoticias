@@ -3,8 +3,10 @@ import useNoticias from "../hooks/useNoticias";
 import Noticia from "../components/Noticia";
 //
 const ListadoNoticias = () => {
-  const { noticias } = useNoticias();
-  //   console.log(noticias);
+  const { noticias, totalNoticias, handleChangePagine, pagina } = useNoticias();
+  // console.log(totalNoticias);
+  const totalPaginas = Math.ceil(totalNoticias / 20);
+  // console.log(Math.ceil(totalPaginas));
   return (
     <>
       <Typography textAlign="center" marginY={5} variant="h3" component="h2">
@@ -24,7 +26,12 @@ const ListadoNoticias = () => {
         alignItems="center"
         spacing={2}
       >
-        <Pagination count={10} color="primary" />
+        <Pagination
+          onChange={handleChangePagine}
+          page={pagina}
+          count={totalPaginas}
+          color="secondary"
+        />
       </Stack>
     </>
   );
