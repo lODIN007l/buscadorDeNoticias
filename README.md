@@ -9,6 +9,6 @@ Desarrollo de proyecto en donde se emplea el us de Context teniendo un State glo
 ## Deploy
 
 Hosting ocupado : Vercel
-enlace:
+enlace:https://buscador-de-noticias-4tqi.vercel.app/
 
 ### Wilson Lluilema
